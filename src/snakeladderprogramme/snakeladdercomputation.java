@@ -6,17 +6,20 @@ public class snakeladdercomputation {
 		final int NOPLAY = 0;
 		final int LADDER = 1;
 		final int SNAKE = 2;
-		boolean b =true;
+		int count = 0;
 		
 		int Position =0;
 		//printing intial position of player
 		System.out.println("The player Position is "+Position);
 		
 		//while loop for printing exact winning position of player
-		while(Position <= 100&&b==true) {
+		while(Position != 100) {
+			
 			//rolling dice number to play player
 			int dicenbr =(int) Math.floor(((Math.random() * 10) % 6) +1);
 			System.out.println("The dice nbr is " + dicenbr);
+			count++;
+			System.out.println("dice rolled "+count+" times");
 			
 			//printing choice to get into positions
 			int choice = (int) Math.floor(Math.random() * 10) % 3;
@@ -40,7 +43,6 @@ public class snakeladdercomputation {
 				else 
 				{
 					System.out.println("winning psition = " +Position);		
-				b=false;
 				}
 				}
 			
@@ -50,7 +52,7 @@ public class snakeladdercomputation {
 			Position = Position - dicenbr;
 			if(Position < 0) {
 			Position=0;
-			System.out.println("The player get +position+ ,please restart the game");
+			System.out.println("The player get zero position ,please restart the game");
 			}
 			System.out.println("Player dropped by Position is = "+Position);
 			break;
