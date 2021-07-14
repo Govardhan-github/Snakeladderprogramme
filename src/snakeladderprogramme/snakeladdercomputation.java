@@ -31,10 +31,10 @@ public class snakeladdercomputation {
 									if( position == 0) {
 										System.out.println("Restart the game");
 									break;
-								}
-					  }
+									}
+				}
 				else
-						System.out.println("The player stays at same position");
+					System.out.println("The player stays at same position");
 			}
 	}
 
